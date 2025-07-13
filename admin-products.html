@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - Luxury Furniture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .admin-nav {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .admin-nav h2 {
+            color: white;
+        }
+        .admin-nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+        }
+        .management-section {
+            padding: 3rem 0;
+        }
+        .product-table-container {
+            overflow-x: auto;
+        }
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-table th, .product-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            text-align: left;
+        }
+        .product-table th {
+            background: #f8f9fa;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #28a745;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="admin-nav">
+        <h2>Product Management</h2>
+        <div>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-products.html">Product Management</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section class="management-section">
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
+                <button id="add-new-product" class="btn btn-primary">Add New Product</button>
+            </div>
+            <div class="product-table-container">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th style="text-align: center;">Status</th>
+                            <th style="text-align: center;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-products-list">
+                        <!-- Products will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="product-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div style="background-color: #fefefe; margin: 10% auto; padding: 2rem; border-radius: 15px; max-width: 600px;">
+            <h2 id="modal-title" style="margin-bottom: 1.5rem; color: #2c3e50;">Add Product</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" required style="width: 100%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <input type="text" id="product-description" required style="width: 100%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price</label>
+                        <input type="number" id="product-price" required style="width: 100%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px;">
+                            <option value="dining">Dining Room</option>
+                            <option value="living">Living Room</option>
+                            <option value="bedroom">Bedroom</option>
+                            <option value="office">Office</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-style">Style</label>
+                        <select id="product-style" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px;">
+                            <option value="modern">Modern</option>
+                            <option value="classic">Classic</option>
+                            <option value="contemporary">Contemporary</option>
+                            <option value="traditional">Traditional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image-url">Image URL</label>
+                        <input type="text" id="product-image-url" required style="width: 100%;">
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" id="cancel-modal" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

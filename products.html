@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Luxury Furniture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Luxury Furniture</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link active">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="company.html" class="nav-link">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin.html" class="nav-link">Admin</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Collections</h1>
+            <p>Discover our handcrafted luxury furniture pieces</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="search-input">Product Name:</label>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search products...">
+                </div>
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="dining">Dining Room</option>
+                        <option value="living">Living Room</option>
+                        <option value="bedroom">Bedroom</option>
+                        <option value="office">Office</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Style:</label>
+                    <select id="style-filter">
+                        <option value="all">All Styles</option>
+                        <option value="modern">Modern</option>
+                        <option value="classic">Classic</option>
+                        <option value="contemporary">Contemporary</option>
+                        <option value="traditional">Traditional</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range:</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="budget">Under $1,000</option>
+                        <option value="mid">$1,000 - $3,000</option>
+                        <option value="luxury">$3,000+</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="products-container">
+                <!-- Product 1: Modern Dining Table -->
+                <div class="product-item" data-category="dining" data-style="modern" data-price="luxury">
+                    <div class="product-image">
+                        <a href="product-detail-1.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Modern Dining Table">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Modern Dining Table</h3>
+                        <p class="product-description">Elegant 8-seater dining table with premium oak finish. Perfect for modern homes seeking both style and durability.</p>
+                        <div class="product-meta">
+                            <span class="price">$4,200</span>
+                            <span class="category">Dining Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Classic Dining Chairs -->
+                <div class="product-item" data-category="dining" data-style="classic" data-price="mid">
+                    <div class="product-image">
+                        <a href="product-detail-2.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Classic Dining Chairs">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Classic Dining Chairs</h3>
+                        <p class="product-description">Set of 6 upholstered dining chairs with walnut frame. Timeless design and comfort for your dining space.</p>
+                        <div class="product-meta">
+                            <span class="price">$2,800</span>
+                            <span class="category">Dining Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Contemporary Sofa -->
+                <div class="product-item" data-category="living" data-style="contemporary" data-price="luxury">
+                    <div class="product-image">
+                        <a href="product-detail-3.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Contemporary Sofa">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Contemporary Sofa</h3>
+                        <p class="product-description">3-seater luxury sofa with premium fabric upholstery. A perfect centerpiece for a contemporary living room.</p>
+                        <div class="product-meta">
+                            <span class="price">$3,500</span>
+                            <span class="category">Living Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Modern Coffee Table -->
+                <div class="product-item" data-category="living" data-style="modern" data-price="mid">
+                    <div class="product-image">
+                        <a href="product-detail-4.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Modern Coffee Table">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Modern Coffee Table</h3>
+                        <p class="product-description">Sleek coffee table with tempered glass top and a minimalist design.</p>
+                        <div class="product-meta">
+                            <span class="price">$1,200</span>
+                            <span class="category">Living Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Traditional Bed Frame -->
+                <div class="product-item" data-category="bedroom" data-style="traditional" data-price="luxury">
+                    <div class="product-image">
+                        <a href="product-detail-5.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Traditional Bed Frame">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Traditional Bed Frame</h3>
+                        <p class="product-description">King-size bed frame with ornate carvings and a rich mahogany finish.</p>
+                        <div class="product-meta">
+                            <span class="price">$5,800</span>
+                            <span class="category">Bedroom</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Modern Nightstand -->
+                <div class="product-item" data-category="bedroom" data-style="modern" data-price="mid">
+                    <div class="product-image">
+                        <a href="product-detail-6.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Modern Nightstand">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Modern Nightstand</h3>
+                        <p class="product-description">Minimalist nightstand with built-in charging station and a sleek, modern design.</p>
+                        <div class="product-meta">
+                            <span class="price">$850</span>
+                            <span class="category">Bedroom</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7: Contemporary Desk -->
+                <div class="product-item" data-category="office" data-style="contemporary" data-price="mid">
+                    <div class="product-image">
+                        <a href="product-detail-7.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Contemporary Desk">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Contemporary Desk</h3>
+                        <p class="product-description">Executive desk with a spacious work surface and a built-in cable management system.</p>
+                        <div class="product-meta">
+                            <span class="price">$2,100</span>
+                            <span class="category">Office</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8: Modern Office Chair -->
+                <div class="product-item" data-category="office" data-style="modern" data-price="budget">
+                    <div class="product-image">
+                        <a href="product-detail-8.html" class="product-image-link">
+                            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Modern Office Chair">
+                            <div class="product-overlay">
+                                <span class="btn btn-primary">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-details">
+                        <h3>Modern Office Chair</h3>
+                        <p class="product-description">Ergonomic office chair with lumbar support, adjustable armrests, and a breathable mesh back.</p>
+                        <div class="product-meta">
+                            <span class="price">$750</span>
+                            <span class="category">Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Custom Furniture?</h2>
+                <p>Let us create a bespoke piece that perfectly fits your space and style.</p>
+                <a href="about.html#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxury Furniture</h3>
+                    <p>Crafting luxury furniture for over three decades, we bring timeless elegance to your home.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="company.html">Company</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@luxefurniture.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Design District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxury Furniture. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
