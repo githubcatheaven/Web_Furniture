@@ -1,3 +1,18 @@
+Fully design and coding with Cursor
+Including full function of following:
+1. Home (Landing Page)
+2. Products
+   - Product Thumbnail
+   - Product Link to Detail Page
+   - Product Filter
+3. Company Info
+4. About Us
+5. Admin Portal
+   - Statistics Info
+   - Product Management
+   - Log in/out
+
+
 # Web_Furniture - Luxury Furniture Website
 
 A modern, responsive website for a luxury furniture business featuring dynamic animations, beautiful design, and comprehensive product showcasing.
